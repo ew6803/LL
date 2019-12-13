@@ -1,4 +1,5 @@
-//Student h
+//Student Header File
+
 #ifndef STUDENT_H
 #define STUDENT_H
 
@@ -18,7 +19,6 @@ class Student {
   char* name = new char[50];
   int ID;
   float GPA;
-
 
 };
 

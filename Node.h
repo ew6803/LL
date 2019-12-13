@@ -1,4 +1,5 @@
-// Node.h
+// Node Header File
+
 #ifndef NODE_H
 #define NODE_H
 #include "Student.h"
@@ -11,12 +12,12 @@ class Node {
   Node();
   ~Node();
   void setStudent(Student*);
-  void setNext(Node* newNext);
   Student* getStudent();
+  void setNext(Node* NextNextNode);
   Node* getNext();
  private:
   Student* student;
-  Node* next;
+  Node* nextNode;
 
 };
 

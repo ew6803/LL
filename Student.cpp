@@ -1,4 +1,5 @@
-//Student
+//Student Class File
+
 #include "Student.h"
 #include <iostream>
 #include <cstring>

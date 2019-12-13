@@ -7,7 +7,7 @@ using namespace std;
 
 Student::Student(const char* sName, int sID, float sGPA) {
   strcpy(name, sName);
-  id = sID;
+  ID = sID;
   GPA = sGPA; 
  
 }

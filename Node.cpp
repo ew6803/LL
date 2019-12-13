@@ -1,4 +1,5 @@
-// Node
+// Node Class File
+
 #include "Node.h"
 #include "Student.h"
 #include <iostream>
@@ -7,25 +8,27 @@ using namespace std;
 
 Node::Node() {
   student = NULL;
-  next = NULL;
+  nextNode = NULL;
 }
 
 Node::~Node() {
   delete &student;
-  next = NULL;
+  nextNode = NULL;
+}
+
+void Node::setStudent(Student* newStudent) {
+  student = newStudent;
+}
+
+void Node::setNext(Node* NextNextNode) {
+  nextNode = NextNextNode;
+}
+
+Node* Node::getNext() {
+  return nextNode;
 }
 
 Student* Node::getStudent() {
   return student;
 }
-Node* Node::getNext() {
-  return next; 
-}
 
-void Node::setNext(Node* newNext) {
-  next = newNext;
-}
-
-void Node::setStudent(Student* newStudent) {
-  student = newStudent; 
-}

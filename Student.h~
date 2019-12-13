@@ -16,9 +16,8 @@ class Student {
   float getGPA();
  private:
   char* name = new char[50];
-  int id;
+  int ID;
   float GPA;
-
 
 };
 
