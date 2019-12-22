@@ -53,17 +53,19 @@ int main () {
 
 //Add Students Function
 void ADD(char* Name, int ID, float GPA) {
+  Student* aStudent = NULL;
+  Student* aNotherStudent = NULL;
   Student* newStudent = new Student(Name, ID, GPA);
   Node* current = start;
   if(current == NULL) {
-    start = new Node();
+    start = new Node(aStudent);
     start->setStudent(newStudent);
   }
   else{
     while(current->getNext() != NULL) {
       current = current->getNext();
     }
-    current->setNext(new Node());
+    current->setNext(new Node(aNotherStudent));
     current->getNext()->setStudent(newStudent);
   }
 }

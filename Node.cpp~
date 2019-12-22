@@ -1,4 +1,5 @@
-// Node
+// Node Class File
+
 #include "Node.h"
 #include "Student.h"
 #include <iostream>

@@ -9,7 +9,7 @@ using namespace std;
 
 class Node {
  public:
-  Node();
+  Node(Student*);
   ~Node();
   void setStudent(Student*);
   Student* getStudent();

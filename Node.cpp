@@ -6,7 +6,7 @@
 
 using namespace std;
 
-Node::Node() {
+Node::Node(Student* aStudent) {
   student = NULL;
   nextNode = NULL;
 }

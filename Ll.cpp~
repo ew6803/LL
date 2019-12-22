@@ -1,3 +1,6 @@
+// This program is the first part of a Linked List, which is Essentialy performs the same functions as the Student List Program, this incomplete version allows you to add students to a database and exit
+// Ethan Wang
+// 12/12/19
 #include <iostream>
 #include "Student.h"
 #include "Node.h"
@@ -11,6 +14,7 @@ Node* start = NULL;
 void ADD(char* Name, int ID, float GPA);
 void PRINT(Node* nextNode);
 
+//Runner and UI, Function Caller
 int main () {
   bool continueList = true;
   while(continueList == true) {
@@ -47,23 +51,26 @@ int main () {
 
 }
 
-
+//Add Students Function
 void ADD(char* Name, int ID, float GPA) {
+  Student* aStudent = NULL;
+  Student* aNotherStudent = NULL;
   Student* newStudent = new Student(Name, ID, GPA);
   Node* current = start;
   if(current == NULL) {
-    start = new Node();
+    start = new Node(*aStudent);
     start->setStudent(newStudent);
   }
   else{
     while(current->getNext() != NULL) {
       current = current->getNext();
     }
-    current->setNext(new Node());
+    current->setNext(new Node(*aNotherStudent));
     current->getNext()->setStudent(newStudent);
   }
 }
 
+//Print Students Function 
 void PRINT(Node* nextNode) {
   if (nextNode != NULL) {
     cout << "Name: " << nextNode->getStudent()->getName() << endl; 
